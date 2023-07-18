@@ -12,3 +12,20 @@
     justify-content: center;
     align-items: center;
 }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    transform: left;
+    z-index: 10;
+    transition: all .3s ease-in-out;
+}
+
+.active {
+    backdrop-filter: blur(1.5px) brightness(50%);
+}
