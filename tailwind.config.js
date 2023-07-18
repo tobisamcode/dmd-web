@@ -22,6 +22,13 @@ module.exports = {
       boxShadow: {
         "header-shadow": "0px 4px 13px 9px rgba(0, 0, 0, 0.02)",
       },
+      backgroundImage: {
+        "hero-pattern-1": "url('/img/leftherobg.png')",
+        "hero-pattern-2": "url('/img/rightherobg.png')",
+      },
+      backgroundColor: {
+        overlay: "rgba(0,0,0,0.5)",
+      },
     },
   },
   plugins: [],
