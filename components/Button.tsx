@@ -9,7 +9,7 @@ interface IBtn {
 const Button = ({ text, className, icon }: IBtn) => {
   return (
     <button className={className}>
-      {text} <span>{icon}</span>{" "}
+      {text} <span>{icon}</span>
     </button>
   );
 };
