@@ -5,12 +5,25 @@
 @tailwind utilities;
 * {
     font-family: 'Satoshi', sans-serif;
+    box-sizing: border-box;
 }
 
-.app {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+    max-width: 1140px;
+    width: cal(100% - 3rem);
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1140px) {
+    .container {
+        max-width: 90%;
+    }
 }
 
 .overlay {
