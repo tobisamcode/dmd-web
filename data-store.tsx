@@ -23,3 +23,26 @@ export const projectData = [
     desc: "My entry for the design with Rooks challenge. The task was to design a pricing plan page and a check-out flow that accepts credit card and crypto payment",
   },
 ];
+
+export const testimonialInfo = [
+  {
+    comment:
+      "“Currently working with Moses at PAADC, and he has always delivered quickly with quality. I am impressed by his work ethic and communication skills.”",
+    author: "Abdullah Idris, Chief Technology Officer, PAADC",
+  },
+  {
+    comment:
+      "“Working with DMD was a highly positive experience. His creativity, attention to detail, and efficient communication skill made him an outstanding designer to collaborate with. I would highly recommend DMD for future design projects and look forward to the opportunity to work together again.”",
+    author: "Daniel (Swift) Ojeyomi, Frontend developer",
+  },
+  {
+    comment:
+      "“I had the pleasure of collaborating with Moses on a few projects and I have to say he has a keen eye for creating visually appealing designs. His ability to pay attention to detail, come up with various alternatives to design solutions, and also have seamless communication during the duration of the project is really emulating.I highly recommend Moses for any future design endeavors.”",
+    author: "Adeleye Temitayo, UX Designer",
+  },
+  {
+    comment:
+      "“Moses possesses a unique blend of creativity and analytical thinking, which enables him to craft innovative and user-centered design solutions. He has a deep understanding of user experience principles and excels in translating complex ideas into intuitive and visually appealing designs. His ability to empathize with users and anticipate their needs has been instrumental in creating successful products that have received positive feedback from both clients and end-users.”",
+    author: "Arthur Akalazu, Product Designer",
+  },
+];
