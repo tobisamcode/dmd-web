@@ -5,6 +5,7 @@ import Nav from "components/Nav";
 import { useState } from "react";
 import Link from "next/link";
 import { projectData } from "data-store";
+import Image from "next/image";
 
 export default function Page() {
   const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -91,13 +92,17 @@ export default function Page() {
             </div>
 
             <div className="flex justify-center items-center ">
-              <img
-                src="img/dmdhero.png"
+              <Image
+                width={480}
+                height={480}
+                src="/img/dmdhero.png"
                 alt="hero"
                 className="mt-[48px] md:mt-0 hidden md:flex"
               />
-              <img
-                src="img/dmdmobile.png"
+              <Image
+                width={480}
+                height={480}
+                src="/img/dmdmobile.png"
                 alt="hero"
                 className="mt-[48px] md:mt-0 visible md:hidden w-full"
               />
@@ -116,8 +121,16 @@ export default function Page() {
 
               <div className="lg:w-full self-center  grid gap-[32px] md:grid-cols-2 lg:h-[650px] md:overflow-auto no-scrollbar">
                 {projectData.map((project) => (
-                  <div className="flex flex-col p-[24px] lg:p-8 border border-[#EBEBEB] rounded-[1rem] gap-4 bg-[#FAFAFA]">
-                    <img src={project.image} alt="project" />
+                  <div
+                    key={project.title}
+                    className="flex flex-col p-[24px] lg:p-8 border border-[#EBEBEB] rounded-[1rem] gap-4 bg-[#FAFAFA]"
+                  >
+                    <Image
+                      width={335}
+                      height={220}
+                      src={project.image}
+                      alt="project"
+                    />
                     <h1 className="font-[700] text-[18px] text-black-black_8 ">
                       {project.title}
                     </h1>
