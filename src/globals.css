@@ -3,6 +3,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+    @variants responsive {
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+    }
+}
+
 * {
     font-family: 'Satoshi', sans-serif;
     box-sizing: border-box;
@@ -26,8 +42,18 @@
     }
 }
 
+section {
+    padding: 120px 0;
+}
+
+@media screen and (max-width: 658px) {
+    section {
+        padding: 80px 0;
+    }
+}
+
 .overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -41,4 +67,8 @@
 
 .active {
     backdrop-filter: blur(1.5px) brightness(50%);
+}
+
+.no-scroll {
+    overflow-y: hidden;
 }
