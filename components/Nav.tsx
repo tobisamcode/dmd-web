@@ -9,9 +9,9 @@ interface INav {
 const Nav = ({ showMenu, toggleMenu }: INav) => {
   return (
     <div
-      className={`py-[50px] px-[4.375vw] lg:px-[11.029vw]  top-0  ${
+      className={`py-[50px] px-[4.375vw] lg:px-[11.029vw]  top-0   ${
         showMenu ? "right-0" : "-right-[100%] md:-right-[50%]"
-      }  transition-all delay-[0.1s] border z-10 bg-white h-[100vh] w-full fixed md:w-[50%]`}
+      }  transition-all delay-[0.1s] border z-10 bg-white h-[100vh] w-full fixed md:w-[50%] `}
     >
       <header className="w-full   flex justify-end mb-[100px] cursor-pointer">
         <div className="flex gap items-center gap-x-[1.923vw]">
