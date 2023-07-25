@@ -4,7 +4,7 @@ import Button from "components/Button";
 import Nav from "components/Nav";
 import { useState } from "react";
 import Link from "next/link";
-import { projectData } from "data-store";
+import { projectData, testimonialInfo } from "data-store";
 import Image from "next/image";
 
 export default function Page() {
@@ -16,9 +16,9 @@ export default function Page() {
 
   return (
     <>
-      <div className="app">
+      <div className="app relative overflow-hidden">
         {/* HEADER */}
-        <header className="w-[100%] mb-[60px] md:mb-[90px]   md:shadow-header-shadow bg-[#FAFAFA] border-b border-[rgba(191, 191, 191, 0.20)] md:border-none  md:bg-white  ">
+        <header className="w-[100%] mb-[60px] md:mb-[90px]   md:shadow-header-shadow bg-[#FAFAFA] border-b border-[rgba(191, 191, 191, 0.20)] md:border-none  md:bg-white sticky ">
           <nav className=" container py-[1.875rem]  flex justify-between items-center">
             <Link href="/">
               <div className="text-black-black_10 font-helvetica text-[24px] md:text-[1.75em] font-[700] ">
@@ -119,32 +119,64 @@ export default function Page() {
                 Featured Projects
               </h1>
 
-              <div className="lg:w-full self-center  grid gap-[32px] md:grid-cols-2 lg:h-[650px] md:overflow-auto no-scrollbar">
-                {projectData.map((project) => (
-                  <div
-                    key={project.title}
-                    className="flex flex-col p-[24px] lg:p-8 border border-[#EBEBEB] rounded-[1rem] gap-4 bg-[#FAFAFA]"
-                  >
-                    <Image
-                      width={335}
-                      height={220}
-                      src={project.image}
-                      alt="project"
-                    />
-                    <h1 className="font-[700] text-[18px] text-black-black_8 ">
-                      {project.title}
-                    </h1>
-                    <p className="font-[300] text-black-black_8 text-[14px] lg:text-[18px] ">
-                      {project.desc}
-                    </p>
-                    <Button
-                      text="Check full project"
-                      className="py-[0.75rem] md:py-[1rem] w-[184px] md:w-[200px] flex items-center gap-x-[8px] px-[24px] bg-[#F0F0F0] md:px-[32px] rounded-[4px] text-[14px]  font-[300] text-black-black_11"
-                      icon={<img src="svg/arrowrighticon.svg" />}
-                    />
-                  </div>
-                ))}
+              <div className="flex flex-col">
+                <div className="lg:w-full self-center  grid gap-[32px] md:grid-cols-2 lg:h-[650px] md:overflow-auto no-scrollbar">
+                  {projectData.map((project) => (
+                    <div
+                      key={project.title}
+                      className="flex flex-col p-[24px] lg:p-8 border border-[#EBEBEB] rounded-[1rem] gap-4 bg-[#FAFAFA]"
+                    >
+                      <Image
+                        width={335}
+                        height={220}
+                        src={project.image}
+                        alt="project"
+                      />
+                      <h1 className="font-[700] text-[18px] text-black-black_8 ">
+                        {project.title}
+                      </h1>
+                      <p className="font-[300] text-black-black_8 text-[14px] lg:text-[18px] ">
+                        {project.desc}
+                      </p>
+                      <Button
+                        text="Check full project"
+                        className="py-[0.75rem] md:py-[1rem] w-[184px] md:w-[200px] flex items-center gap-x-[8px] px-[24px] bg-[#F0F0F0] md:px-[32px] rounded-[4px] text-[14px]  font-[300] text-black-black_11"
+                        icon={<img src="svg/arrowrighticon.svg" />}
+                      />
+                    </div>
+                  ))}
+                </div>
+                <Button
+                  text="More Projects"
+                  className="mt-[50px] self-center py-[0.75rem] md:py-[1rem] w-[184px] md:w-[320px] flex justify-center items-center gap-x-[8px] px-[24px] bg-black-black_10 md:px-[32px] rounded-[4px] test-[18px] lg:text-[24px]  font-[400] lg:font-[500] text-white"
+                  icon={<img src="/svg/arrowwhiterighticon.svg" />}
+                />
               </div>
+            </div>
+          </main>
+        </section>
+
+        {/* Reviews & Testimonials */}
+        <section className="-mt-20 ">
+          <main className=" container md:testimonial-container">
+            <h1 className="text-[32px] lg:text-[48px] text-black-black_10 font-helvetica font-[700] mb-[24px] md:mb-[50px] ">
+              Reviews & Testimonials
+            </h1>
+
+            <div className="grid grid-flow-col gap-[12px] md:gap-[50px]  overflow-x-scroll no-scrollbar">
+              {testimonialInfo.map((testimonial) => (
+                <div
+                  key={testimonial.author}
+                  className="md:h-[339px] w-[250px] md:w-[524px] py-4 md:py-0 px-[1rem] md:px-[50px] text-[14px] lg:text-[18px] flex flex-col justify-center rounded-[1rem] border border-[#EBEBEB] bg-[#FAFAFA] carousel-item "
+                >
+                  <p className="mb-4 md:mb-8 text-black-black_8  font-[500] ">
+                    {testimonial.comment}
+                  </p>
+                  <h1 className="text-black-black_10 font-[700]">
+                    {testimonial.author}
+                  </h1>
+                </div>
+              ))}
             </div>
           </main>
         </section>
