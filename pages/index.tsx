@@ -158,7 +158,7 @@ export default function Page() {
 
         {/* Reviews & Testimonials */}
         <section className="-mt-20 ">
-          <main className=" container md:testimonial-container">
+          <main className="testimonial-container">
             <h1 className="text-[32px] lg:text-[48px] text-black-black_10 font-helvetica font-[700] mb-[24px] md:mb-[50px] ">
               Reviews & Testimonials
             </h1>
