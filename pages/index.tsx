@@ -4,6 +4,7 @@ import Button from "components/Button";
 import Nav from "components/Nav";
 import { useState } from "react";
 import Link from "next/link";
+import { projectData } from "data-store";
 
 export default function Page() {
   const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -14,7 +15,8 @@ export default function Page() {
 
   return (
     <>
-      <div className="app ">
+      <div className="app">
+        {/* HEADER */}
         <header className="w-[100%] mb-[60px] md:mb-[90px]   md:shadow-header-shadow bg-[#FAFAFA] border-b border-[rgba(191, 191, 191, 0.20)] md:border-none  md:bg-white  ">
           <nav className=" container py-[1.875rem]  flex justify-between items-center">
             <Link href="/">
@@ -39,6 +41,8 @@ export default function Page() {
           </nav>
         </header>
 
+        {/* OVERLAY & NAV */}
+
         <>
           {showMenu && (
             <div
@@ -49,6 +53,8 @@ export default function Page() {
           <Nav showMenu={showMenu} toggleMenu={handleMenuToggle} />
         </>
 
+        {/* HOME SECTION */}
+
         <main className="container    relative bg-hero-pattern-1 bg-no-repeat md:bg-none overflow-hidden ">
           <div className="hidden md:flex absolute w-[640px] h-[640px] rounded-full border border-[#EBEBEB] -left-[150px] top-52"></div>
           <div className="hidden md:flex md:absolute  w-[640px] h-[640px] rounded-full border border-[#EBEBEB] left-24 top-52"></div>
@@ -57,7 +63,10 @@ export default function Page() {
               <span className="flex text-black-black_9  text-[18px] lg:text-[1.5rem] mb-[24px]">
                 <h1 className="mr-[4px]">Hi</h1>
                 <img src="svg/hiicon.svg" alt="hi" />
-                <h1>,I’m Moses Denapo</h1>
+                <h1 className="flex gap-x-2">
+                  ,I’m <span className="hidden lg:flex">Moses Denapo</span>
+                  <span className="visible lg:hidden ">DMD</span>
+                </h1>
               </span>
 
               <p className=" md:text-[20px] text-[18px] lg:text-[32px] lg:w-[510px]  text-black-black_9 mb-[32px]">
@@ -95,6 +104,37 @@ export default function Page() {
             </div>
           </div>
         </main>
+
+        {/* PROJECTS SECTION */}
+
+        <section>
+          <main className="container ">
+            <div className=" flex flex-col gap-4 lg:flex-row lg:gap-x-[100px]">
+              <h1 className="lg:w-[200px] self-center lg:self-start text-[32px] lg:text-[48px] font-[700] text-black-black_10 font-helvetica ">
+                Featured Projects
+              </h1>
+
+              <div className="lg:w-full self-center  grid gap-[32px] md:grid-cols-2 lg:h-[650px] md:overflow-auto no-scrollbar">
+                {projectData.map((project) => (
+                  <div className="flex flex-col p-[24px] lg:p-8 border border-[#EBEBEB] rounded-[1rem] gap-4 bg-[#FAFAFA]">
+                    <img src={project.image} alt="project" />
+                    <h1 className="font-[700] text-[18px] text-black-black_8 ">
+                      {project.title}
+                    </h1>
+                    <p className="font-[300] text-black-black_8 text-[14px] lg:text-[18px] ">
+                      {project.desc}
+                    </p>
+                    <Button
+                      text="Check full project"
+                      className="py-[0.75rem] md:py-[1rem] w-[184px] md:w-[200px] flex items-center gap-x-[8px] px-[24px] bg-[#F0F0F0] md:px-[32px] rounded-[4px] text-[14px]  font-[300] text-black-black_11"
+                      icon={<img src="svg/arrowrighticon.svg" />}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </main>
+        </section>
       </div>
     </>
   );
