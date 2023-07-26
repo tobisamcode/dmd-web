@@ -95,14 +95,14 @@ export default function Page() {
               <Image
                 width={480}
                 height={480}
-                src="/img/dmdhero.png"
+                src="/img/dmdhero.webp"
                 alt="hero"
                 className="mt-[48px] md:mt-0 hidden md:flex"
               />
               <Image
                 width={480}
                 height={480}
-                src="/img/dmdmobile.png"
+                src="/img/dmdmobile.webp"
                 alt="hero"
                 className="mt-[48px] md:mt-0 visible md:hidden w-full"
               />
