@@ -124,7 +124,7 @@ export default function Page() {
 
         {/* PROJECTS SECTION */}
 
-        <section>
+        <section id="project">
           <main className="container ">
             <div className=" flex flex-col gap-4 lg:flex-row lg:gap-x-[100px]">
               <h1 className="lg:w-[200px] self-center lg:self-start text-[32px] lg:text-[48px] font-[700] text-black-black_10 font-helvetica ">
@@ -208,7 +208,7 @@ export default function Page() {
         </section>
 
         {/* CONTACTS */}
-        <div className="border">
+        <div className="border" id="contact-me">
           <main className="container">
             <div className="py-[120px] md:py-[180px]  ">
               <p className="text-black-black_10 font-[700] text-[28px] lg:text-[48px] font-helvetica md:mb-[32px] ">

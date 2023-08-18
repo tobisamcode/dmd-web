@@ -39,13 +39,13 @@ const Nav = ({ showMenu, toggleMenu }: INav) => {
           </li>
 
           <li className="self-end">
-            <Link href="/">Projects</Link>
+            <Link href="#project">Projects</Link>
           </li>
           <li className="self-end">
             <Link href="/">Check CV</Link>
           </li>
           <li>
-            <Link className="flex gap-[13px] items-center" href="/">
+            <Link className="flex gap-[13px] items-center" href="#contact-me">
               <span>Contact me</span>
               <img src="svg/arrowupright.svg" alt="up right" />
             </Link>
