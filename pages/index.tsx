@@ -26,12 +26,16 @@ export default function Page() {
             </Link>
 
             <div className="flex gap-x-[1.923vw] cursor-pointer">
-              <img
+              <Image
+                height={32}
+                width={32}
                 src="svg/darkmodeicon.svg"
                 className="w-[1.5rem] md:w-[2rem]"
                 alt="menu"
               />
-              <img
+              <Image
+                height={32}
+                width={32}
                 onClick={handleMenuToggle}
                 src="svg/menuicon.svg"
                 className="w-[1.5rem] md:w-[2rem]"
@@ -64,7 +68,7 @@ export default function Page() {
             <div className="md:py-[3.625rem] flex flex-col md:justify-center md:font-[500]">
               <span className="flex text-black-black_9  text-[18px] lg:text-[1.5rem] mb-[24px]">
                 <h1 className="mr-[4px]">Hi</h1>
-                <img src="svg/hiicon.svg" alt="hi" />
+                <Image height={24} width={24} src="svg/hiicon.svg" alt="hi" />
                 <h1 className="flex gap-x-2">
                   ,I’m <span className="hidden lg:flex">Moses Denapo</span>
                   <span className="visible lg:hidden ">DMD</span>
@@ -87,7 +91,14 @@ export default function Page() {
                 <Button
                   text="Read more about me"
                   className="py-[0.75rem] md:py-[1rem]  w-[265px] flex items-center gap-x-[8px] px-[24px] md:px-[32px] rounded-[4px] text-[18px] font-[400] text-black-black_11 border border-black-black_2"
-                  icon={<img src="svg/arrowrighticon.svg" />}
+                  icon={
+                    <Image
+                      width={20}
+                      height={24}
+                      alt="arrow"
+                      src="svg/arrowrighticon.svg"
+                    />
+                  }
                 />
               </div>
             </div>
@@ -142,7 +153,14 @@ export default function Page() {
                       <Button
                         text="Check full project"
                         className="py-[0.75rem] md:py-[1rem] w-[184px] md:w-[200px] flex items-center gap-x-[8px] px-[24px] bg-[#F0F0F0] md:px-[32px] rounded-[4px] text-[14px]  font-[300] text-black-black_11"
-                        icon={<img src="svg/arrowrighticon.svg" />}
+                        icon={
+                          <Image
+                            width={20}
+                            height={24}
+                            alt="arrow"
+                            src="svg/arrowrighticon.svg"
+                          />
+                        }
                       />
                     </div>
                   ))}
@@ -150,7 +168,14 @@ export default function Page() {
                 <Button
                   text="More Projects"
                   className="mt-[50px] self-center py-[0.75rem] md:py-[1rem] w-[184px] md:w-[320px] flex justify-center items-center gap-x-[8px] px-[24px] bg-black-black_10 md:px-[32px] rounded-[4px] test-[18px] lg:text-[24px]  font-[400] lg:font-[500] text-white"
-                  icon={<img src="/svg/arrowwhiterighticon.svg" />}
+                  icon={
+                    <Image
+                      width={20}
+                      height={24}
+                      alt="arrow"
+                      src="/svg/arrowwhiterighticon.svg"
+                    />
+                  }
                 />
               </div>
             </div>
