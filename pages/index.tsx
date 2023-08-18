@@ -136,7 +136,7 @@ export default function Page() {
                   {projectData.map((project) => (
                     <div
                       key={project.title}
-                      className="flex flex-col p-[24px] lg:p-8 border border-[#EBEBEB] rounded-[1rem] gap-4 bg-[#FAFAFA]"
+                      className="flex flex-col p-[24px] items-center lg:p-8 border border-[#EBEBEB] rounded-[1rem] gap-4 bg-[#FAFAFA]"
                     >
                       <Image
                         width={335}
