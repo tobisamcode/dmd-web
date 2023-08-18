@@ -1,11 +1,10 @@
-import { BiRightArrowAlt } from "react-icons/bi";
-
 import Button from "components/Button";
 import Nav from "components/Nav";
 import { useState } from "react";
 import Link from "next/link";
 import { projectData, testimonialInfo } from "data-store";
 import Image from "next/image";
+import ScrollToTop from "components/scroll-to-top";
 
 export default function Page() {
   const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -42,8 +41,10 @@ export default function Page() {
           </nav>
         </header>
 
-        {/* OVERLAY & NAV */}
+        {/* SCROLL TO TOP */}
+        <ScrollToTop />
 
+        {/* OVERLAY & NAV */}
         <>
           {showMenu && (
             <div
@@ -180,6 +181,42 @@ export default function Page() {
             </div>
           </main>
         </section>
+
+        {/* CONTACTS */}
+        <div className="border">
+          <main className="container">
+            <div className="py-[120px] md:py-[180px]  ">
+              <p className="text-black-black_10 font-[700] text-[28px] lg:text-[48px] font-helvetica md:mb-[32px] ">
+                Your Product Vision, Crafted to Perfection! 🌟 Reach Out, let's
+                Collaborate and design brilliance
+              </p>
+              <Link
+                href="mosesdenapo@gmail.com"
+                className="text-black-black_8 font-[500]  underline text-[1rem] lg:text-[32px]"
+              >
+                send me a mail📩
+              </Link>
+            </div>
+          </main>
+        </div>
+
+        {/* FOOTER */}
+        <footer className="container ">
+          <div className="flex items-center py-[32px] lg:py-[80px] justify-between">
+            <Link href="/" className="w-[80%]">
+              <div className="text-black-black_10 font-helvetica text-[24px] md:text-[1.75em] font-[700] ">
+                DMD <span className="font-[400] -ml-2">.design</span>
+              </div>
+            </Link>
+
+            <div className="flex flex-wrap gap-y-[32px] gap-x-4 md:gap-[80px] text-black-black_8 text-[14px]  lg:text-[28px] font-[300] underline ">
+              <Link href="">Behance</Link>
+              <Link href="">LinkedIn</Link>
+              <Link href="">Twitter</Link>
+              <Link href="">Dribbble</Link>
+            </div>
+          </div>
+        </footer>
       </div>
     </>
   );
