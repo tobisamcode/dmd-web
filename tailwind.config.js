@@ -25,6 +25,7 @@ module.exports = {
       backgroundImage: {
         "hero-pattern-1": "url('/img/leftherobg.png')",
         "hero-pattern-2": "url('/img/rightherobg.png')",
+        "contact-pattern": "url('/img/rightherobg.png')",
       },
       backgroundColor: {
         overlay: "rgba(0,0,0,0.5)",
