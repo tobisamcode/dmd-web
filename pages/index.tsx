@@ -152,7 +152,7 @@ export default function Page() {
                       </p>
                       <Button
                         text="Check full project"
-                        className="py-[0.75rem] md:py-[1rem] w-[184px] md:w-[200px] flex items-center gap-x-[8px] px-[24px] bg-[#F0F0F0] md:px-[32px] rounded-[4px] text-[14px]  font-[300] text-black-black_11"
+                        className="py-[0.75rem] md:py-[1rem] w-[184px] md:w-[200px] flex items-center gap-x-[8px] px-[24px] bg-[#F0F0F0] md:px-[32px] rounded-[4px] text-[14px]  font-[300] text-black-black_11 self-start"
                         icon={
                           <Image
                             width={20}
