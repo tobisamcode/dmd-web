@@ -203,7 +203,7 @@ export default function Page() {
         {/* FOOTER */}
         <footer className="container ">
           <div className="flex items-center py-[32px] lg:py-[80px] justify-between">
-            <Link href="/" className="w-[80%]">
+            <Link href="/" className="w-[80%] lg:w-auto">
               <div className="text-black-black_10 font-helvetica text-[24px] md:text-[1.75em] font-[700] ">
                 DMD <span className="font-[400] -ml-2">.design</span>
               </div>
