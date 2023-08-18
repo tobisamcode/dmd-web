@@ -212,14 +212,14 @@ export default function Page() {
           <main className="container">
             <div className="py-[120px] md:py-[180px]  ">
               <p className="text-black-black_10 font-[700] text-[28px] lg:text-[48px] font-helvetica md:mb-[32px] ">
-                Your Product Vision, Crafted to Perfection! 🌟 Reach Out, let's
-                Collaborate and design brilliance
+                Your Product Vision, Crafted to Perfection! &#127775; Reach Out,
+                let's Collaborate and design brilliance
               </p>
               <Link
                 href="mosesdenapo@gmail.com"
                 className="text-black-black_8 font-[500]  underline text-[1rem] lg:text-[32px]"
               >
-                send me a mail📩
+                send me a mail &#128233;
               </Link>
             </div>
           </main>
