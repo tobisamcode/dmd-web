@@ -64,7 +64,7 @@ const about = () => {
           </h1>
 
           <div className="flex md:justify-end   ">
-            <div className="md:w-[70%] flex flex-col gap-y-[1.25rem] border border-[#EBEBEB] rounded-[1rem] py-[2rem] px-[1rem] lg:py-[2.5rem] lg:px-[5rem] bg-[#FAFAFA] ">
+            <div className="w-full md:w-[70%] flex flex-col gap-y-[1.25rem] border border-[#EBEBEB] rounded-[1rem] py-[2rem] px-[1rem] lg:py-[2.5rem] lg:px-[5rem] bg-[#FAFAFA] ">
               {Experinces.map(({ id, role, company, from, to, border }) => (
                 <div
                   key={id}
