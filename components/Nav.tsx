@@ -22,24 +22,34 @@ const Nav = ({ showMenu, toggleMenu }: INav) => {
     >
       <header className="w-full   flex justify-end mb-[100px] cursor-pointer">
         <div className="flex gap items-center gap-x-[1.923vw]">
-          <img
-            onClick={toggleMode}
-            src={`${
-              theme === "light"
-                ? "svg/darkmodeicon.svg"
-                : "svg/lightmodeicon.svg"
-            }`}
-            className="w-[1.5rem] md:w-[2rem]"
-            alt="dark mode"
-          />
-          <img
-            onClick={toggleMenu}
-            src={`${
-              theme === "light" ? "svg/closeicon.svg" : "svg/closelighticon.svg"
-            }`}
-            className="w-[1.5rem] md:w-[2rem]"
-            alt="close-icon"
-          />
+          <>
+            <img
+              onClick={toggleMode}
+              src="svg/darkmodeicon.svg"
+              className="w-[1.5rem] md:w-[2rem] dark:hidden"
+              alt="dark mode"
+            />
+            <img
+              onClick={toggleMode}
+              src="svg/lightmodeicon.svg"
+              className="w-[1.5rem] md:w-[2rem] hidden dark:flex "
+              alt="dark mode"
+            />
+          </>
+          <>
+            <img
+              onClick={toggleMenu}
+              src="svg/closeicon.svg"
+              className="w-[1.5rem] md:w-[2rem] dark:hidden"
+              alt="close-icon"
+            />
+            <img
+              onClick={toggleMenu}
+              src="svg/closelighticon.svg"
+              className="w-[1.5rem] md:w-[2rem] hidden dark:flex "
+              alt="close-icon"
+            />
+          </>
         </div>
       </header>
 

@@ -17,13 +17,6 @@ module.exports = {
       helvetica: ["'Helvetica', 'sans-serif'"],
     },
     extend: {
-      typography: (theme) => ({
-        dark: {
-          css: {
-            color: "white",
-          },
-        },
-      }),
       colors: {
         black: {
           black_2: "#D5D5D5",

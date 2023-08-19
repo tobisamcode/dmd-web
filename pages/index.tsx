@@ -21,7 +21,7 @@ export default function Page() {
         <ScrollToTop />
 
         <main className="container relative md:bg-none overflow-hidden ">
-          <div className=" grid  md:grid-cols-2 md:gap-x-[150px] bg-hero-pattern-2 bg-no-repeat md:bg-none ">
+          <div className=" grid  md:grid-cols-2 md:gap-x-[150px] ">
             <div className="md:py-[3.625rem] flex flex-col md:justify-center md:font-[500]">
               <span className="flex text-black-black_9 dark:text-white-white_8  text-[18px] lg:text-[1.5rem] mb-[24px]">
                 <h1 className="mr-[4px]">Hi</h1>
@@ -51,16 +51,22 @@ export default function Page() {
                   text="Read more about me"
                   className="py-[0.75rem] md:py-[1rem]  w-[265px] flex items-center gap-x-[8px] px-[24px] md:px-[32px] rounded-[4px] text-[18px] font-[400] text-black-black_11 dark:text-white-white border border-black-black_2 dark:border-[#dark:text-white-white_8"
                   icon={
-                    <Image
-                      width={20}
-                      height={24}
-                      alt="arrow"
-                      src={`${
-                        theme === "light"
-                          ? "svg/arrowrighticon.svg"
-                          : "svg/arrowwhiterighticon.svg"
-                      }`}
-                    />
+                    <>
+                      <Image
+                        width={20}
+                        height={24}
+                        alt="arrow"
+                        src="svg/arrowrighticon.svg"
+                        className="dark:hidden"
+                      />{" "}
+                      <Image
+                        width={20}
+                        height={24}
+                        alt="arrow"
+                        src="svg/arrowwhiterighticon.svg"
+                        className="hidden dark:flex "
+                      />
+                    </>
                   }
                 />
               </div>
@@ -118,16 +124,22 @@ export default function Page() {
                         className="py-[0.75rem] md:py-[1rem] w-[184px] md:w-[200px] flex items-center gap-x-[8px] px-[24px] bg-[#F0F0F0] dark:bg-[#171717]  md:px-[32px] rounded-[4px] text-[14px]  font-[300] text-black-black_11 dark:text-white-white self-start"
                         icon={
                           <>
-                            <Image
-                              width={20}
-                              height={24}
-                              alt="arrow"
-                              src={`${
-                                theme === "light"
-                                  ? "svg/arrowrighticon.svg"
-                                  : "svg/arrowwhiterighticon.svg"
-                              }`}
-                            />
+                            <>
+                              <Image
+                                width={20}
+                                height={24}
+                                alt="arrow"
+                                src="svg/arrowrighticon.svg"
+                                className="dark:hidden"
+                              />
+                              <Image
+                                width={20}
+                                height={24}
+                                alt="arrow"
+                                src="svg/arrowwhiterighticon.svg"
+                                className="hidden dark:flex "
+                              />
+                            </>
                           </>
                         }
                       />
@@ -138,16 +150,22 @@ export default function Page() {
                   text="More Projects"
                   className="mt-[50px] self-center py-[0.75rem] md:py-[1rem] w-[184px] md:w-[320px] flex justify-center items-center gap-x-[8px] px-[24px] bg-black-black_10 dark:bg-white-white dark:text-black-black_11 md:px-[32px] rounded-[4px] test-[18px] lg:text-[24px]  font-[400] lg:font-[500] text-white-white"
                   icon={
-                    <Image
-                      width={20}
-                      height={24}
-                      alt="arrow"
-                      src={`${
-                        theme === "light"
-                          ? "svg/arrowwhiterighticon.svg"
-                          : "svg/arrowrighticon.svg"
-                      }`}
-                    />
+                    <>
+                      <Image
+                        width={20}
+                        height={24}
+                        alt="arrow"
+                        src="svg/arrowwhiterighticon.svg"
+                        className="dark:hidden"
+                      />{" "}
+                      <Image
+                        width={20}
+                        height={24}
+                        alt="arrow"
+                        src="svg/arrowrighticon.svg"
+                        className="hidden dark:flex "
+                      />
+                    </>
                   }
                 />
               </div>

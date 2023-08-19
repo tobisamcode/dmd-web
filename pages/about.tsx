@@ -68,7 +68,7 @@ const about = () => {
               {Experinces.map(({ id, role, company, from, to, border }) => (
                 <div
                   key={id}
-                  className={`flex pb-[1.25rem] ${border} border-[#535353] lg:gap-[7.5rem] lg:items-center justify-between`}
+                  className={`flex pb-[1.25rem] ${border} border-black-black_2 dark:border-[#535353] lg:gap-[7.5rem] lg:items-center justify-between`}
                 >
                   <div className="flex gap-2 lg:gap-4 lg:w-[70%]">
                     <h1 className=" text-black-black_10 dark:text-white-white  text-[1.125rem] lg:text-[1.5rem] font-[700] ">
@@ -87,20 +87,38 @@ const about = () => {
 
                   <div className="flex  flex-col lg:flex-row  w-[50%] lg:w-[50%] gap-[.12rem] md:gap-4 justify-center items-center text-black-black_8 dark:text-white-white_8 text-[.875rem] lg:text-[1.125rem] font-[400] lg:font-[500]">
                     <p className="lg:w-[35%] text-center">{from}</p>
-                    <Image
-                      className="hidden md:flex"
-                      src="/svg/arrow-exp.svg"
-                      height={16}
-                      width={16}
-                      alt="arrow-right"
-                    />
-                    <Image
-                      className="md:hidden"
-                      src="/svg/arrow-exp-down.svg"
-                      height={12}
-                      width={12}
-                      alt="arrow-down"
-                    />
+                    <>
+                      <Image
+                        className="hidden md:flex dark:hidden "
+                        src="/svg/arrow-exp.svg"
+                        height={16}
+                        width={16}
+                        alt="arrow-right"
+                      />
+                      <Image
+                        className="hidden md:dark:flex"
+                        src="/svg/arrowwhiterighticon.svg"
+                        height={16}
+                        width={16}
+                        alt="arrow-right"
+                      />
+                    </>
+                    <>
+                      <Image
+                        className="md:hidden dark:hidden "
+                        src="/svg/arrow-exp-down.svg"
+                        height={12}
+                        width={12}
+                        alt="arrow-down"
+                      />
+                      <Image
+                        className="hidden md:hidden dark:flex md:dark:hidden "
+                        src="/svg/arrow-exp-white.svg"
+                        height={12}
+                        width={12}
+                        alt="arrow-down"
+                      />
+                    </>
                     <p className="lg:w-[20%] text-center">{to}</p>
                   </div>
                 </div>
