@@ -61,7 +61,7 @@ export const Experinces: {
     company: "Web team, PAADC",
     from: "February 2023",
     to: "Till Date",
-    border: "border-b border-black-black_2",
+    border: "border-b",
   },
 
   {
@@ -70,7 +70,7 @@ export const Experinces: {
     company: "HNG Internship",
     from: "November 2022",
     to: "December 2022",
-    border: "border-b border-black-black_2",
+    border: "border-b",
   },
 
   {
@@ -79,7 +79,7 @@ export const Experinces: {
     company: "SmartChain Limited",
     from: "August 2022",
     to: "November 2022",
-    border: "border-b border-black-black_2",
+    border: "border-b",
   },
 
   {
