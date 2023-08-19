@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 interface INav {
   showMenu: boolean;
@@ -7,22 +8,35 @@ interface INav {
 }
 
 const Nav = ({ showMenu, toggleMenu }: INav) => {
+  const { theme, setTheme } = useTheme();
+
+  const toggleMode = () => {
+    theme === "dark" ? setTheme("light") : setTheme("dark");
+  };
+
   return (
     <div
       className={`py-[50px] px-[4.375vw] lg:px-[11.029vw]  top-0  z-40   ${
         showMenu ? "right-0" : "-right-[100%] md:-right-[50%]"
-      }  transition-all delay-[0.1s] border z-10 bg-white h-[100vh] w-full fixed md:w-[50%] `}
+      }  transition-all delay-[0.1s]  z-10 bg-white-white dark:bg-black-black_10 h-[100vh] w-full fixed md:w-[50%] `}
     >
       <header className="w-full   flex justify-end mb-[100px] cursor-pointer">
         <div className="flex gap items-center gap-x-[1.923vw]">
           <img
-            src="svg/darkmodeicon.svg"
+            onClick={toggleMode}
+            src={`${
+              theme === "light"
+                ? "svg/darkmodeicon.svg"
+                : "svg/lightmodeicon.svg"
+            }`}
             className="w-[1.5rem] md:w-[2rem]"
             alt="dark mode"
           />
           <img
             onClick={toggleMenu}
-            src="svg/closeicon.svg"
+            src={`${
+              theme === "light" ? "svg/closeicon.svg" : "svg/closelighticon.svg"
+            }`}
             className="w-[1.5rem] md:w-[2rem]"
             alt="close-icon"
           />
@@ -32,7 +46,7 @@ const Nav = ({ showMenu, toggleMenu }: INav) => {
       <main className="flex flex-col ">
         <ul
           onClick={toggleMenu}
-          className="flex flex-col gap-[50px] font-[700] text-[28px] text-black-black_10  self-end mb-[50px]"
+          className="flex flex-col gap-[50px] font-[700] text-[28px] text-black-black_10 dark:text-white-white  self-end mb-[50px]"
         >
           <li className="self-end">
             <Link href="/about">About me</Link>
@@ -52,7 +66,7 @@ const Nav = ({ showMenu, toggleMenu }: INav) => {
           </li>
         </ul>
 
-        <ul className="flex flex-wrap self-end w-[300px] text-black-black_10 text-[28px] font-[400] gap-x-[80px] gap-y-[24px] ">
+        <ul className="flex flex-wrap self-end w-[300px] text-black-black_10 dark:text-white-white text-[28px] font-[400] gap-x-[80px] gap-y-[24px] ">
           <li className="underline">
             <Link href="">Behance</Link>
           </li>
