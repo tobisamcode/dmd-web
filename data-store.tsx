@@ -46,3 +46,48 @@ export const testimonialInfo = [
     author: "Arthur Akalazu, Product Designer",
   },
 ];
+
+export const Experinces: {
+  id: number;
+  role: string;
+  company: string;
+  from: string;
+  to: string;
+  border: string;
+}[] = [
+  {
+    id: 1,
+    role: "UI/UX Lead",
+    company: "Web team, PAADC",
+    from: "February 2023",
+    to: "Till Date",
+    border: "border-b border-black-black_2",
+  },
+
+  {
+    id: 2,
+    role: "Product Design Intern",
+    company: "HNG Internship",
+    from: "November 2022",
+    to: "December 2022",
+    border: "border-b border-black-black_2",
+  },
+
+  {
+    id: 3,
+    role: "Product Design Intern",
+    company: "SmartChain Limited",
+    from: "August 2022",
+    to: "November 2022",
+    border: "border-b border-black-black_2",
+  },
+
+  {
+    id: 4,
+    role: "Product Design Intern",
+    company: "The Zuri Team",
+    from: "May 2022",
+    to: "July 2022",
+    border: "",
+  },
+];

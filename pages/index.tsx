@@ -5,61 +5,19 @@ import Link from "next/link";
 import { projectData, testimonialInfo } from "data-store";
 import Image from "next/image";
 import ScrollToTop from "components/scroll-to-top";
+import Header from "components/Header";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 export default function Page() {
-  const [showMenu, setShowMenu] = useState<boolean>(false);
-
-  const handleMenuToggle = () => {
-    setShowMenu((prevState) => !prevState);
-  };
-
   return (
     <>
       <div className="app relative overflow-hidden">
         {/* HEADER */}
-        <header className="w-[100%] mb-[60px] md:mb-[90px]   md:shadow-header-shadow bg-[#FAFAFA] border-b border-[rgba(191, 191, 191, 0.20)] md:border-none  md:bg-white sticky ">
-          <nav className=" container py-[1.875rem]  flex justify-between items-center">
-            <Link href="/">
-              <div className="text-black-black_10 font-helvetica text-[24px] md:text-[1.75em] font-[700] ">
-                DMD <span className="font-[400] -ml-2">.design</span>
-              </div>
-            </Link>
-
-            <div className="flex gap-x-[1.923vw] cursor-pointer">
-              <Image
-                height={32}
-                width={32}
-                src="svg/darkmodeicon.svg"
-                className="w-[1.5rem] md:w-[2rem]"
-                alt="menu"
-              />
-              <Image
-                height={32}
-                width={32}
-                onClick={handleMenuToggle}
-                src="svg/menuicon.svg"
-                className="w-[1.5rem] md:w-[2rem]"
-                alt="dark mode"
-              />
-            </div>
-          </nav>
-        </header>
+        <Header />
 
         {/* SCROLL TO TOP */}
         <ScrollToTop />
-
-        {/* OVERLAY & NAV */}
-        <>
-          {showMenu && (
-            <div
-              className={`overlay ${showMenu === true ? "active" : ""}`}
-              onClick={handleMenuToggle}
-            ></div>
-          )}
-          <Nav showMenu={showMenu} toggleMenu={handleMenuToggle} />
-        </>
-
-        {/* HOME SECTION */}
 
         <main className="container    relative bg-hero-pattern-1 bg-no-repeat md:bg-none overflow-hidden ">
           <div className="hidden md:flex absolute w-[640px] h-[640px] rounded-full border border-[#EBEBEB] -left-[150px] top-52"></div>
@@ -83,11 +41,13 @@ export default function Page() {
               </p>
 
               <div className="flex flex-col lg:flex-row gap-[1rem] lg:gap-[32px]">
-                <Button
-                  text={"Contact me"}
-                  icon=<></>
-                  className="text-white py-[0.75rem] md:py-[1rem] bg-black-black_11 self-start  px-[24px] md:px-[32px] rounded-[0.25rem] text-[1.125rem] font-[400]"
-                />
+                <Link href="#contact-me">
+                  <Button
+                    text={"Contact me"}
+                    icon=<></>
+                    className="text-white py-[0.75rem] md:py-[1rem] bg-black-black_11 self-start  px-[24px] md:px-[32px] rounded-[0.25rem] text-[1.125rem] font-[400]"
+                  />
+                </Link>
                 <Button
                   text="Read more about me"
                   className="py-[0.75rem] md:py-[1rem]  w-[265px] flex items-center gap-x-[8px] px-[24px] md:px-[32px] rounded-[4px] text-[18px] font-[400] text-black-black_11 border border-black-black_2"
@@ -208,40 +168,10 @@ export default function Page() {
         </section>
 
         {/* CONTACTS */}
-        <div className="border" id="contact-me">
-          <main className="container">
-            <div className="py-[120px] md:py-[180px]  ">
-              <p className="text-black-black_10 font-[700] text-[28px] lg:text-[48px] font-helvetica md:mb-[32px] ">
-                Your Product Vision, Crafted to Perfection! 🌟 Reach Out, let's
-                Collaborate and design brilliance
-              </p>
-              <Link
-                href="mosesdenapo@gmail.com"
-                className="text-black-black_8 font-[500]  underline text-[1rem] lg:text-[32px]"
-              >
-                send me a mail📩
-              </Link>
-            </div>
-          </main>
-        </div>
+        <Contact />
 
         {/* FOOTER */}
-        <footer className="container ">
-          <div className="flex items-center py-[32px] lg:py-[80px] justify-between">
-            <Link href="/" className="w-[80%] lg:w-auto">
-              <div className="text-black-black_10 font-helvetica text-[24px] md:text-[1.75em] font-[700] ">
-                DMD <span className="font-[400] -ml-2">.design</span>
-              </div>
-            </Link>
-
-            <div className="flex flex-wrap gap-y-[32px] gap-x-4 md:gap-[80px] text-black-black_8 text-[14px]  lg:text-[28px] font-[300] underline ">
-              <Link href="">Behance</Link>
-              <Link href="">LinkedIn</Link>
-              <Link href="">Twitter</Link>
-              <Link href="">Dribbble</Link>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </>
   );

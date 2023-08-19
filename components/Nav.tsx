@@ -9,7 +9,7 @@ interface INav {
 const Nav = ({ showMenu, toggleMenu }: INav) => {
   return (
     <div
-      className={`py-[50px] px-[4.375vw] lg:px-[11.029vw]  top-0   ${
+      className={`py-[50px] px-[4.375vw] lg:px-[11.029vw]  top-0  z-40   ${
         showMenu ? "right-0" : "-right-[100%] md:-right-[50%]"
       }  transition-all delay-[0.1s] border z-10 bg-white h-[100vh] w-full fixed md:w-[50%] `}
     >
@@ -35,7 +35,7 @@ const Nav = ({ showMenu, toggleMenu }: INav) => {
           className="flex flex-col gap-[50px] font-[700] text-[28px] text-black-black_10  self-end mb-[50px]"
         >
           <li className="self-end">
-            <Link href="/">About me</Link>
+            <Link href="/about">About me</Link>
           </li>
 
           <li className="self-end">
