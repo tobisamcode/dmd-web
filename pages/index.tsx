@@ -39,36 +39,39 @@ export default function Page() {
                 prosper.
               </p>
 
-              <div className="flex flex-col lg:flex-row gap-[1rem] lg:gap-[32px]">
+              <div className="flex flex-wrap lg:flex-row gap-[1rem] lg:gap-[32px]">
                 <Link href="#contact-me">
                   <Button
                     text={"Contact me"}
                     icon=<></>
-                    className="text-white-white dark:text-black-black_11 py-[0.75rem] md:py-[1rem] bg-black-black_11 dark:bg-white-white self-start  px-[24px] md:px-[32px] rounded-[0.25rem] text-[1.125rem] font-[400]"
+                    className="text-white-white dark:text-black-black_11 py-[0.75rem] md:py-[1rem] bg-black-black_11 dark:bg-white-white self-start  px-[24px] md:px-[32px] rounded-[0.25rem] text-[1.125rem] font-[300] md:font-[400]"
                   />
                 </Link>
-                <Button
-                  text="Read more about me"
-                  className="py-[0.75rem] md:py-[1rem]  w-[265px] flex items-center gap-x-[8px] px-[24px] md:px-[32px] rounded-[4px] text-[18px] font-[400] text-black-black_11 dark:text-white-white border border-black-black_2 dark:border-[#dark:text-white-white_8"
-                  icon={
-                    <>
-                      <Image
-                        width={20}
-                        height={24}
-                        alt="arrow"
-                        src="svg/arrowrighticon.svg"
-                        className="dark:hidden"
-                      />{" "}
-                      <Image
-                        width={20}
-                        height={24}
-                        alt="arrow"
-                        src="svg/arrowwhiterighticon.svg"
-                        className="hidden dark:flex "
-                      />
-                    </>
-                  }
-                />
+
+                <Link href="/about">
+                  <Button
+                    text="Read more about me"
+                    className="py-[0.75rem] md:py-[1rem]   flex items-center gap-x-[8px] px-[24px] md:px-[32px] rounded-[4px] text-[16px] font-[300] md:font-[400] text-black-black_11 dark:text-white-white border border-black-black_2 dark:border-[#525252]   "
+                    icon={
+                      <>
+                        <Image
+                          width={20}
+                          height={24}
+                          alt="arrow"
+                          src="svg/arrowrighticon.svg"
+                          className="dark:hidden"
+                        />{" "}
+                        <Image
+                          width={20}
+                          height={24}
+                          alt="arrow"
+                          src="svg/arrowwhiterighticon.svg"
+                          className="hidden dark:flex "
+                        />
+                      </>
+                    }
+                  />
+                </Link>
               </div>
             </div>
 
@@ -83,9 +86,9 @@ export default function Page() {
               <Image
                 width={480}
                 height={480}
-                src="/img/dmdmobile.webp"
-                alt="hero"
-                className="mt-[48px] md:mt-0 visible md:hidden w-full"
+                src="/img/dmdhero.webp"
+                alt="hero-mobile"
+                className="mt-[48px] md:mt-0 flex md:hidden w-full"
               />
             </div>
           </div>
