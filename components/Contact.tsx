@@ -1,13 +1,10 @@
 import Link from "next/link";
 import React from "react";
-import { useTheme } from "next-themes";
 
 const Contact = () => {
-  const { theme, setTheme } = useTheme();
-
   return (
-    <>
-      <div className="bg-contact-pattern dark:hidden" id="contact-me">
+    <div id="contact-me">
+      <div className="bg-contact-pattern dark:hidden">
         <main className="container  ">
           <div className="py-[120px] md:py-[180px]  ">
             <p className="text-black-black_10 dark:text-white-white font-[700]  text-[1.75rem] lg:text-[48px] font-helvetica mb-4 md:mb-[32px] ">
@@ -24,7 +21,7 @@ const Contact = () => {
         </main>
       </div>
 
-      <div className="hidden dark:flex dark:bg-project_bg " id="contact-me">
+      <div className="hidden dark:flex dark:bg-project_bg">
         <main className="container  ">
           <div className="py-[120px] md:py-[180px]  ">
             <p className="text-black-black_10 dark:text-white-white font-[700]  text-[1.75rem] lg:text-[48px] font-helvetica mb-4 md:mb-[32px] ">
@@ -40,7 +37,7 @@ const Contact = () => {
           </div>
         </main>
       </div>
-    </>
+    </div>
   );
 };
 
