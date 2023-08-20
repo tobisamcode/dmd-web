@@ -28,7 +28,7 @@ const Header = () => {
             </div>
           </Link>
 
-          <div className="flex gap-x-[1.923vw] cursor-pointer">
+          <div className="flex gap-x-[1.2rem] lg:gap-x-[2rem] cursor-pointer">
             {
               <>
                 <Image
