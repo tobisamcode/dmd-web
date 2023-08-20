@@ -16,7 +16,7 @@ const Nav = ({ showMenu, toggleMenu }: INav) => {
 
   return (
     <div
-      className={`py-[50px] px-[4.375vw] lg:px-[11.029vw]  top-0  z-40   ${
+      className={`py-[50px] px-[4.375vw] lg:px-[11.029vw]  top-0  z-50   ${
         showMenu ? "right-0" : "-right-[100%] md:-right-[50%]"
       }  transition-all delay-[0.1s]  z-10 bg-white-white dark:bg-black-black_10 h-[100vh] w-full fixed md:w-[50%] `}
     >
@@ -56,22 +56,27 @@ const Nav = ({ showMenu, toggleMenu }: INav) => {
       <main className="flex flex-col ">
         <ul
           onClick={toggleMenu}
-          className="flex flex-col gap-[15px] lg:gap-[36px] font-[700] text-[28px] text-black-black_10 dark:text-white-white  self-end mb-[50px]"
+          className="flex flex-col gap-[2.8rem] lg:gap-[36px] font-[700] text-[28px] text-black-black_10 dark:text-white-white  self-end mb-[50px]"
         >
           <li className="self-end">
             <Link href="/about">About me</Link>
           </li>
 
           <li className="self-end">
-            <Link href="www.behance.net%2FdenapomosesDMD">Projects</Link>
+            <a href="https://www.behance.net/denapomosesDMD" target="_blank">
+              Projects
+            </a>
           </li>
           <li className="self-end">
-            <Link href="docs.google.com%2Fdocument%2Fd%2F1ba1nCZWN27Eew0d-DB2z-c128KwQ4uXaWAihanY9It0%2Fedit%3Fusp%3Dsharing">
+            <a
+              href="https://docs.google.com/document/d/1ba1nCZWN27Eew0d-DB2z-c128KwQ4uXaWAihanY9It0/edit"
+              target="_blank"
+            >
               Check CV
-            </Link>
+            </a>
           </li>
           <li>
-            <Link className="flex gap-[13px] items-center" href="#contact-me">
+            <a className="flex gap-[13px] items-center" href="#contact-me">
               <span>Contact me</span>
               <img
                 src="svg/arrowupright.svg"
@@ -83,25 +88,33 @@ const Nav = ({ showMenu, toggleMenu }: INav) => {
                 className="hidden dark:flex"
                 alt="light up right"
               />
-            </Link>
+            </a>
           </li>
         </ul>
 
         <ul className="flex flex-wrap self-end w-[300px] text-black-black_10 dark:text-white-white text-[28px] font-[400] gap-x-[80px] gap-y-[24px] ">
           <li className="underline">
-            <Link href="">Behance</Link>
+            <a target="_blank" href="www.behance.net/denapomosesDMD">
+              Behance
+            </a>
           </li>
 
           <li className="underline">
-            <Link href="">LinkedIn</Link>
+            <a target="_blank" href="https://www.linkedin.com/in/mosesdenapo/">
+              LinkedIn
+            </a>
           </li>
 
           <li className="underline">
-            <Link href="">Twitter</Link>
+            <a target="_blank" href="https://twitter.com/dammyboy121">
+              Twitter
+            </a>
           </li>
 
           <li className="underline">
-            <Link href="">Dribbble</Link>
+            <a target="_blank" href="https://dribbble.com/Dammy_121">
+              Dribbble
+            </a>
           </li>
         </ul>
       </main>
