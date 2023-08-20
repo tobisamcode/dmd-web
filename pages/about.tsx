@@ -10,7 +10,7 @@ const about = () => {
     <div className="relative dark:bg-[#141414] ">
       <Header />
 
-      <section className=" mt-[5rem] pb-[5rem] md:pb-[7.6rem] p-0 ">
+      <section className="pt-[12rem] pb-[5rem] md:pb-[7.6rem] p-0 ">
         <div className="container ">
           <h1 className="mb-[1.5rem] lg:mb-[3.12rem] text-black-black_11 dark:text-white-white font-helvetica font-[700] text-[2rem] lg:text-[3rem] ">
             About Me
