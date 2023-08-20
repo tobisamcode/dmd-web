@@ -56,22 +56,33 @@ const Nav = ({ showMenu, toggleMenu }: INav) => {
       <main className="flex flex-col ">
         <ul
           onClick={toggleMenu}
-          className="flex flex-col gap-[50px] font-[700] text-[28px] text-black-black_10 dark:text-white-white  self-end mb-[50px]"
+          className="flex flex-col gap-[15px] font-[700] text-[28px] text-black-black_10 dark:text-white-white  self-end mb-[50px]"
         >
           <li className="self-end">
             <Link href="/about">About me</Link>
           </li>
 
           <li className="self-end">
-            <Link href="#project">Projects</Link>
+            <Link href="www.behance.net%2FdenapomosesDMD">Projects</Link>
           </li>
           <li className="self-end">
-            <Link href="/">Check CV</Link>
+            <Link href="docs.google.com%2Fdocument%2Fd%2F1ba1nCZWN27Eew0d-DB2z-c128KwQ4uXaWAihanY9It0%2Fedit%3Fusp%3Dsharing">
+              Check CV
+            </Link>
           </li>
           <li>
             <Link className="flex gap-[13px] items-center" href="#contact-me">
               <span>Contact me</span>
-              <img src="svg/arrowupright.svg" alt="up right" />
+              <img
+                src="svg/arrowupright.svg"
+                className="dark:hidden"
+                alt="up right"
+              />
+              <img
+                src="svg/lightarrowupright.svg"
+                className="hidden dark:flex"
+                alt="light up right"
+              />
             </Link>
           </li>
         </ul>
