@@ -56,7 +56,7 @@ const Nav = ({ showMenu, toggleMenu }: INav) => {
       <main className="flex flex-col ">
         <ul
           onClick={toggleMenu}
-          className="flex flex-col gap-[15px] font-[700] text-[28px] text-black-black_10 dark:text-white-white  self-end mb-[50px]"
+          className="flex flex-col gap-[15px] lg:gap-[36px] font-[700] text-[28px] text-black-black_10 dark:text-white-white  self-end mb-[50px]"
         >
           <li className="self-end">
             <Link href="/about">About me</Link>
