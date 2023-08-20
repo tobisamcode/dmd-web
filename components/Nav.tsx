@@ -16,11 +16,11 @@ const Nav = ({ showMenu, toggleMenu }: INav) => {
 
   return (
     <div
-      className={`py-[50px] px-[4.375vw] lg:px-[11.029vw]  top-0  z-50   ${
+      className={`contaner py-[50px] px-[2rem] lg:px-[24rem]  top-0  z-50   ${
         showMenu ? "right-0" : "-right-[100%] md:-right-[50%]"
       }  transition-all delay-[0.1s]  z-10 bg-white-white dark:bg-black-black_10 h-[100vh] w-full fixed md:w-[50%] `}
     >
-      <header className="w-full   flex justify-end mt-[1.5rem] mb-[100px] cursor-pointer">
+      <header className="w-full   flex justify-end mt-[1.5rem] lg:-mt-[0.6rem] mb-[100px] cursor-pointer">
         <div className="flex gap items-center  gap-x-[1.2rem] lg:gap-x-[2rem]">
           <>
             <img
