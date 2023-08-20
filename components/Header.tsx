@@ -20,15 +20,15 @@ const Header = () => {
 
   return (
     <>
-      <header className="w-[100%] mb-[60px] md:mb-[90px] dark:text-white-white  md:shadow-header-shadow bg-[#FAFAFA] dark:bg-[#141414] border-b border-[rgba(191, 191, 191, 0.20)] dark:border-none md:border-none  md:bg-white-white sticky ">
-        <nav className=" container py-[1.875rem]  flex justify-between items-center">
+      <header className=" w-[100%] mb-[60px] md:mb-[90px] dark:text-white-white  md:shadow-header-shadow bg-[#FAFAFA] dark:bg-[#171717] lg:dark:bg-[#141414] border-b border-[rgba(191, 191, 191, 0.20)] dark:border-black-black_10 md:border-none  md:bg-white-white fixed z-40 ">
+        <nav className=" container pb-[2rem] pt-[4rem] lg:py-[1.875rem]  flex justify-between items-center">
           <Link href="/">
             <div className=" dark:text-white-white text-black-black_10 font-helvetica text-[24px] md:text-[1.75em] font-[700] ">
               DMD <span className="font-[400] -ml-2">.design</span>
             </div>
           </Link>
 
-          <div className="flex gap-x-[1.923vw] cursor-pointer">
+          <div className="flex gap-x-[1.2rem] lg:gap-x-[2rem] cursor-pointer">
             {
               <>
                 <Image

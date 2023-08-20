@@ -10,17 +10,16 @@ import Footer from "../components/Footer";
 import { useTheme } from "next-themes";
 
 export default function Page() {
-  const { theme, setTheme } = useTheme();
   return (
     <>
-      <div className="app relative  dark:bg-[#141414]">
+      <div className="app relative dark:bg-[#141414]">
         {/* HEADER */}
         <Header />
 
         {/* SCROLL TO TOP */}
         <ScrollToTop />
 
-        <main className="container relative md:bg-none overflow-hidden ">
+        <main className="container pt-[12rem] relative md:bg-none overflow-hidden">
           <div className=" grid  md:grid-cols-2 md:gap-x-[150px] ">
             <div className="md:py-[3.625rem] flex flex-col md:justify-center md:font-[500]">
               <span className="flex text-black-black_9 dark:text-white-white_8  text-[18px] lg:text-[1.5rem] mb-[24px]">
