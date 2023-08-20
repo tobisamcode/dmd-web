@@ -20,8 +20,8 @@ const Nav = ({ showMenu, toggleMenu }: INav) => {
         showMenu ? "right-0" : "-right-[100%] md:-right-[50%]"
       }  transition-all delay-[0.1s]  z-10 bg-white-white dark:bg-black-black_10 h-[100vh] w-full fixed md:w-[50%] `}
     >
-      <header className="w-full   flex justify-end mb-[100px] cursor-pointer">
-        <div className="flex gap items-center gap-x-[1.923vw]">
+      <header className="w-full   flex justify-end mt-[1.5rem] mb-[100px] cursor-pointer">
+        <div className="flex gap items-center  gap-x-[1.2rem] lg:gap-x-[2rem]">
           <>
             <img
               onClick={toggleMode}
