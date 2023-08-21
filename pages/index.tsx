@@ -19,7 +19,7 @@ export default function Page() {
         {/* SCROLL TO TOP */}
         <ScrollToTop />
 
-        <main className="container pt-[12rem] relative md:bg-none overflow-hidden">
+        <main className="container pt-[12rem] relative md:bg-none overflow-x-hidden">
           <div className=" grid  md:grid-cols-2 md:gap-x-[150px] ">
             <div className="md:py-[3.625rem] flex flex-col md:justify-center md:font-[500]">
               <span className="flex text-black-black_9 dark:text-white-white_8  text-[18px] lg:text-[1.5rem] mb-[24px]">
@@ -177,7 +177,7 @@ export default function Page() {
 
         {/* Reviews & Testimonials */}
         <section className="-mt-20 ">
-          <main className="testimonial-container">
+          <main className="container overflow-x-hidden">
             <h1 className="text-[32px] lg:text-[48px] text-black-black_10 dark:text-white-white font-helvetica font-[700] mb-[24px] md:mb-[50px] ">
               Reviews & Testimonials
             </h1>
