@@ -17,7 +17,7 @@ const Nav = ({ showMenu, toggleMenu }: INav) => {
   return (
     <div
       className={`contaner py-[50px] px-[2rem] lg:px-[24rem]  top-0  z-50   ${
-        showMenu ? "right-0" : "-right-[100%] md:-right-[50%]"
+        showMenu ? "right-0" : "-right-[100%] md:-right-[100%]"
       }  transition-all delay-[0.1s]  z-10 bg-white-white dark:bg-black-black_10 h-[100vh] w-full fixed md:w-[50%] `}
     >
       <header className="w-full   flex justify-end mt-[1.5rem] lg:-mt-[0.6rem] mb-[100px] cursor-pointer">
@@ -56,7 +56,7 @@ const Nav = ({ showMenu, toggleMenu }: INav) => {
       <main className="flex flex-col ">
         <ul
           onClick={toggleMenu}
-          className="flex flex-col gap-[2.8rem] lg:gap-[36px] font-[700] text-[28px] text-black-black_10 dark:text-white-white  self-end mb-[50px]"
+          className="flex flex-col gap-[2.8rem] lg:gap-[36px] font-[700] text-[28px] text-black-black_10 dark:text-white-white  self-end mb-[50px] w-[150%] "
         >
           <li className="self-end">
             <Link href="/about">About me</Link>
@@ -75,7 +75,7 @@ const Nav = ({ showMenu, toggleMenu }: INav) => {
               Check CV
             </a>
           </li>
-          <li>
+          <li className="self-end">
             <a className="flex gap-[13px] items-center" href="#contact-me">
               <span>Contact me</span>
               <img
